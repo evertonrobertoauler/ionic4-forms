@@ -1,21 +1,21 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar [color]="'primary'">
     <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <form>
+  <form appFormManager (submit)="submit()">
     <ion-list>
       <ion-item>
         <ion-label>User</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" appNextInput></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" appNextInput></ion-input>
       </ion-item>
-      <ion-button type="submit">Sign In</ion-button>
+      <ion-button type="submit" appNextInput>Sign In</ion-button>
     </ion-list>
   </form>
 </ion-content>
